@@ -40,7 +40,7 @@ const HomeRight = ( detailsID ) => {
             }
         }
         try {
-            const request = await axios.get("http://localhost:8000/status", config)
+            const request = await axios.get("http://34.125.245.206/status", config)
             setStatusList(request.data);
         } catch (error) {
             console.log("status", error)
@@ -86,7 +86,7 @@ useEffect(() => {
             }
         }
         try {
-            const request = axios.patch(`http://localhost:8000/update-details/${detailsID.detailsID}`, editedDetails, config)
+            const request = axios.patch(`http://34.125.245.206/update-details/${detailsID.detailsID}`, editedDetails, config)
             console.log("updated ", request.data)
         } catch (error) {
             console.error(error)

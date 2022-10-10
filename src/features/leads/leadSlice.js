@@ -4,8 +4,8 @@ import axios from "axios";
 
 import {stores} from "../../store"
 
-const URL = "http://localhost:8000/";
-const URLupdate = "http://localhost:8000/update-details/:id";
+const URL = "http://34.125.245.206/";
+const URLupdate = "http://34.125.245.206/update-details/:id";
 
 
 const initialState = {
@@ -23,7 +23,7 @@ const initialState = {
 
 
 export const getLeads = createAsyncThunk("leads/getLeads", async ({token}) => {
-    console.log("errerererer", token.token)
+    //console.log("errerererer", token.token)
     const config = {
         headers: {
             "Authorization": `Bearer ${token.token}`
@@ -31,7 +31,7 @@ export const getLeads = createAsyncThunk("leads/getLeads", async ({token}) => {
     }
     try {
         const fetchLeads = await axios.get(URL, config);
-        console.log("fetch triggered in leadslice ", fetchLeads.data)
+        //console.log("fetch triggered in leadslice ", fetchLeads.data)
         return fetchLeads.data;
     } catch (error) {
         console.error(error)

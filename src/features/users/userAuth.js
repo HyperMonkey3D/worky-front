@@ -1,8 +1,8 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const URL = "http://localhost:8000/user/signup"
-const URLlogin = "http://localhost:8000/user/login"
+const URL = "http://34.125.245.206/user/signup"
+const URLlogin = "http://34.125.245.206/user/login"
 
 const initialState = {
     user: [],
